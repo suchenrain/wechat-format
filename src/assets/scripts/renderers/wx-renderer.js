@@ -77,11 +77,11 @@ var WxRenderer = function (opts) {
   this.getRenderer = function () {
     footnotes = []
     footnoteindex = 0
-  
+
     styleMapping = this.buildTheme(this.opts.theme)
     var renderer = new marked.Renderer()
     FuriganaMD.register(renderer);
-  
+
     renderer.heading = function (text, level) {
       if (level < 3) {
         return '<h2 ' + S('h2') + '>' + text + '</h2>'
@@ -98,7 +98,7 @@ var WxRenderer = function (opts) {
     renderer.code = function (text, infostring) {
       text = text.replace(/</g, "&lt;")
       text = text.replace(/>/g, "&gt;")
-  
+
       var lines = text.split('\n')
       var codeLines = []
       var numbers = []
@@ -109,8 +109,8 @@ var WxRenderer = function (opts) {
       }
       var lang = infostring || ''
       return '<section class="code-snippet__fix code-snippet__js">'
-        + '<ul class="code-snippet__line-index code-snippet__js">' + numbers.join('')+'</ul>'
-        + '<pre class="code-snippet__js" data-lang="'+lang+'">' 
+        // + '<ul class="code-snippet__line-index code-snippet__js">' + numbers.join('')+'</ul>'
+        + '<pre class="code-snippet__js" data-lang="'+lang+'">'
           + codeLines.join('')
         + '</pre></section>'
     }
@@ -137,26 +137,26 @@ var WxRenderer = function (opts) {
     }
     renderer.link = function (href, title, text) {
       if (href.indexOf('https://mp.weixin.qq.com') === 0) {
-        return '<a href="' + href +'" title="' + (title || text) + '" ' + S('wx_link') +'>' + text + '</a>'; 
+        return '<a href="' + href +'" title="' + (title || text) + '" ' + S('wx_link') +'>' + text + '</a>';
       }else if( href === text){
         return text;
       } else {
         if (ENV_USE_REFERENCES) {
           var ref = addFootnote(title || text, href)
-          return '<span ' + S('link') + '>' + text + '<sup>['+ref+']</sup></span>'; 
+          return '<span ' + S('link') + '>' + text + '<sup>['+ref+']</sup></span>';
         } else {
-          return '<a href="' + href +'" title="' + (title || text) + '" ' + S('link') + '>' + text + '</a>'; 
+          return '<a href="' + href +'" title="' + (title || text) + '" ' + S('link') + '>' + text + '</a>';
         }
       }
     }
     renderer.strong = renderer.em = function (text) {
-      return '<strong ' + S('strong') + '>' + text + '</strong>'; 
+      return '<strong ' + S('strong') + '>' + text + '</strong>';
     }
     renderer.table = function (header, body) {
-      return '<table ' + S('table') + '><thead ' + S('thead') + '>' + header + '</thead><tbody>' + body + '</tbody></table>'; 
+      return '<table ' + S('table') + '><thead ' + S('thead') + '>' + header + '</thead><tbody>' + body + '</tbody></table>';
     }
     renderer.tablecell = function (text, flags) {
-      return '<td ' + S('td') + '>' + text + '</td>'; 
+      return '<td ' + S('td') + '>' + text + '</td>';
     }
     renderer.hr = function(){
       return '<hr style="border-style: solid;border-width: 1px 0 0;border-color: rgba(0,0,0,0.1);-webkit-transform-origin: 0 0;-webkit-transform: scale(1, 0.5);transform-origin: 0 0;transform: scale(1, 0.5);">';

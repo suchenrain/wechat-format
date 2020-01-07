@@ -27,11 +27,13 @@ var app = new Vue({
       currentTheme: 'default',
       themeOption: [
         { label: 'default', value: 'default', author: 'Lyric'},
-        { label: 'lupeng', value: 'lupeng', author: '鲁鹏'}
+        { label: 'lupeng', value: 'lupeng', author: '鲁鹏'},
+        { label: 'chen', value: 'chen', author: 'Chen'}
       ],
       styleThemes: {
         default: defaultTheme,
-        lupeng: lupengTheme
+        lupeng: lupengTheme,
+        chen: chenTheme
       },
       aboutDialogVisible: false
     }
@@ -98,11 +100,11 @@ var app = new Vue({
     copy: function () {
       var clipboardDiv = document.getElementById('output')
       clipboardDiv.focus();
-      window.getSelection().removeAllRanges();  
-      var range = document.createRange(); 
+      window.getSelection().removeAllRanges();
+      var range = document.createRange();
       range.setStartBefore(clipboardDiv.firstChild);
       range.setEndAfter(clipboardDiv.lastChild);
-      window.getSelection().addRange(range);  
+      window.getSelection().addRange(range);
 
       try {
         if (document.execCommand('copy')) {
