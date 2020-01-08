@@ -109,7 +109,11 @@ var WxRenderer = function (opts) {
       }
       var lang = infostring || ''
       return '<section class="code-snippet__fix code-snippet__js">'
+<<<<<<< HEAD
         + '<ul class="code-snippet__line-index code-snippet__js">' + numbers.join('')+'</ul>'
+=======
+        // + '<ul class="code-snippet__line-index code-snippet__js">' + numbers.join('')+'</ul>'
+>>>>>>> 299a7a155d25a0641a3a2fb98ae920406bb0a5e4
         + '<pre class="code-snippet__js" data-lang="'+lang+'">'
           + codeLines.join('')
         + '</pre></section>'

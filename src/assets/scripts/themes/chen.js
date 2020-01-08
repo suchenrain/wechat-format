@@ -5,7 +5,11 @@ var chenTheme = {
     'line-height': '1.5'
   },
   BASE_BLOCK: {
+<<<<<<< HEAD
     'margin': '20px 5px'
+=======
+    'margin': '20px 10px'
+>>>>>>> 299a7a155d25a0641a3a2fb98ae920406bb0a5e4
   },
   // block element
   block: {
@@ -14,15 +18,26 @@ var chenTheme = {
       'text-align': 'center',
       'font-weight': 'normal',
       'text-align': 'center',
+<<<<<<< HEAD
       'margin': '80px 5px 40px 5px'
+=======
+      'margin': '80px 10px 40px 10px'
+>>>>>>> 299a7a155d25a0641a3a2fb98ae920406bb0a5e4
     },
     h3: {
       'font-weight': 'bold',
       'font-size': '120%',
+<<<<<<< HEAD
       'margin': '40px 5px 20px 5px'
     },
     p: {
       'margin': '10px 5px',
+=======
+      'margin': '40px 10px 20px 10px'
+    },
+    p: {
+      'margin': '10px 10px',
+>>>>>>> 299a7a155d25a0641a3a2fb98ae920406bb0a5e4
       'line-height': '1.6'
     },
     blockquote: {
@@ -40,7 +55,11 @@ var chenTheme = {
       'padding': '10px',
       'line-height': '1.3',
       'border': '1px solid rgb(236,236,236)',
+<<<<<<< HEAD
       'margin': '10px 0',
+=======
+      'margin': '20px 0',
+>>>>>>> 299a7a155d25a0641a3a2fb98ae920406bb0a5e4
     },
     image: {
       'border-radius': '4px',
@@ -62,7 +81,11 @@ var chenTheme = {
       'list-style': 'circle',
     },
     footnotes: {
+<<<<<<< HEAD
       'margin': '10px 5px',
+=======
+      'margin': '10px 10px',
+>>>>>>> 299a7a155d25a0641a3a2fb98ae920406bb0a5e4
       'font-size': '14px'
     }
   },
@@ -71,6 +94,7 @@ var chenTheme = {
     listitem: {
       'text-indent': '-20px',
       'display': 'block',
+<<<<<<< HEAD
       'margin': '10px 5px',
     },
     codespan: {
@@ -91,6 +115,23 @@ var chenTheme = {
     },
     strong: {
       'color': '#404040'
+=======
+      'margin': '10px 10px',
+    },
+    codespan: {
+      // 'font-family': FONT_FAMILY_MONO,
+      'padding': '.2em .4em',
+      'margin': '0',
+      'font-size': '85%',
+      'background-color': 'rgba(27,31,35,.05)',
+      'border-radius': '3px'
+    },
+    link: {
+      'color': '#ff3502'
+    },
+    strong: {
+      'color': '#ff3502'
+>>>>>>> 299a7a155d25a0641a3a2fb98ae920406bb0a5e4
     },
     table: {
       'border-collapse': 'collapse',
