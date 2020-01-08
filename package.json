@@ -1,0 +1,22 @@
+{
+  "name": "wechat-format",
+  "version": "1.0.0",
+  "description": "转化 Markdown 到给微信特制的 HTML",
+  "main": "static.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suchenrain/wechat-format.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suchenrain/wechat-format/issues"
+  },
+  "homepage": "https://github.com/suchenrain/wechat-format#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
